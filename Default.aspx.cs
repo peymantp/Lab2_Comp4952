@@ -9,6 +9,29 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!IsPostBack)
+        {
 
+        }
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        TextBox1.Text = "";
+        TextBox2.Text = "";
+
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if(Valid()){
+
+        }
+    }
+
+    private bool Valid()
+    {
+
+        return true;
     }
 }

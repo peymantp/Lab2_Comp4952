@@ -39,12 +39,14 @@
                 <tr>
                     <td class="auto-style4">Annual Interest Rate</td>
                     <td>
-                        <input id="Text1" type="text" /></td>
+                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">Number of Years</td>
                     <td>
-                        <input id="Text2" type="text" /></td>
+                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">Future value</td>
@@ -57,8 +59,12 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4">
+                        <asp:Button ID="Button1" runat="server" Text="Calculate" />
+                    </td>
+                    <td>
+                        &nbsp;<asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Clear" />
+                    </td>
                 </tr>
             </table>
         </div>
