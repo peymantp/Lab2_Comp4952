@@ -20,7 +20,12 @@
         .auto-style4 {
             width: 377px;
         }
+        .auto-style5 {
+            height: 30px;
+        }
     </style>
+
+    <link href="StyleSheet.css" rel="stylesheet"" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -28,30 +33,38 @@
         <h1>Investment Calculator</h1>
         
         <div>
-            <table class="auto-style1">
+            <table class="auto-style1 table" border="0">
                 <tr>
                     <td class="auto-style3">Montly Investment</td>
                     <td class="auto-style2">
-                        <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:DropDownList ID="DropDownList" runat="server">
+                            <asp:ListItem Value="10"></asp:ListItem>
+                            <asp:ListItem Value="20"></asp:ListItem>
+                            <asp:ListItem Value="30"></asp:ListItem>
+                            <asp:ListItem Value="30"></asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">Annual Interest Rate</td>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxAnnual" runat="server"></asp:TextBox>
+&nbsp;&nbsp;
+                        <asp:Label ID="LabelAnnualError" runat="server" ForeColor="#FF3300"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">Number of Years</td>
-                    <td>
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <td class="auto-style5">
+                        <asp:TextBox ID="TextBoxYears" runat="server"></asp:TextBox>
+&nbsp;&nbsp;
+                        <asp:Label ID="LabelYearError" runat="server" ForeColor="#FF3300"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">Future value</td>
-                    <td>
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    <td class="auto-style3">Future value</td>
+                    <td class="auto-style2">
+                        <asp:Label ID="LabelValue" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -60,7 +73,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style4">
-                        <asp:Button ID="Button1" runat="server" Text="Calculate" />
+                        <asp:Button ID="Button1" runat="server" Text="Calculate" OnClick="Button1_Click" />
                     </td>
                     <td>
                         &nbsp;<asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Clear" />

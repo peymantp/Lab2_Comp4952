@@ -1,0 +1,10 @@
+﻿body {
+}
+
+table, th, td {
+   border: 1px solid black;
+}
+
+table{
+    background: rgba(94, 24, 24, 0.51);
+}

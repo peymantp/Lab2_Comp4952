@@ -17,21 +17,31 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        TextBox1.Text = "";
-        TextBox2.Text = "";
-
+        TextBoxAnnual.Text = "";
+        TextBoxYears.Text = "";
     }
 
     protected void Button1_Click(object sender, EventArgs e)
     {
         if(Valid()){
-
+            var value = int.Parse(DropDownList.Text) * Math.Pow( (1 + ((int.Parse(TextBoxAnnual.Text)/100 + 1) / 1)), int.Parse(TextBoxYears.Text));
+            LabelValue.Text = value + "";
         }
     }
 
     private bool Valid()
     {
-
-        return true;
+        bool valid = true;
+        if (String.IsNullOrWhiteSpace(TextBoxAnnual.Text))
+        {
+            LabelAnnualError.Text = "Select an interest rate from 1 to 23! This field is required!";
+            valid = false;
+        }
+        if (String.IsNullOrWhiteSpace(TextBoxYears.Text))
+        {
+            LabelYearError.Text = "Number of years possible range is 1 to 45! This field is required!";
+            valid = false;
+        }
+        return valid;
     }
 }
