@@ -85,27 +85,30 @@ ii.	Add required field validators
 18.	Add CSS style.
 a.	Add the CSS style of your choice such that the interface design is improved. Use Add/Add New Item/StyleSheet. Add the corresponding CSS class to each element of the interface.
 
- 
-
- 
-
-19.	Test your application.
-20.	If you have Azure accounts: Upload(copy in your azure virtual server) the folder with the your website under your directory c:\inetpub\wwwroot
-21.	To test your website functionality use: http://localhost/Name_of_folder/default.aspx
- 
-
 Answer the questions:
+
 a.	What is happening when a user requests a page from a remote server?
+
 b.	Is it any client-side code executing in your assignment application? If so, how is the client-side code executed in ASP.NET?
+
 c.	What is the role of the line:
+
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
 d.	What is the role of a default web form?
+
 e.	What special folders are in ASP.NET and what is their role?
+
 f.	What is the difference between web server controls and HTML controls?
+
 g.	What is the role of property IsPostBack and how should be used?
+
 h.	What control validators are available in ASP.NET, how should be used?
+
 i.	What is the role of isValid and how should be used?
+
 j.	What is happening when the user hits the refresh button?
+
 
 
 
