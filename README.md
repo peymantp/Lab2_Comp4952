@@ -116,7 +116,7 @@ i.	What is the role of isValid and how should be used?
 <b> Gets a value indicating whether page validation succeeded. </b>
 
 j.	What is happening when the user hits the refresh button?
-
+<b>
 The webpage will prompt the user that the browser needs to resend the information previosly submitted
 
 - GET "/Default.aspx"
