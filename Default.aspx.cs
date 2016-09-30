@@ -23,25 +23,40 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        if(Valid()){
+        clearError();
+        if (Page.IsValid){
             var value = int.Parse(DropDownList.Text) * Math.Pow( (1 + ((int.Parse(TextBoxAnnual.Text)/100 + 1) / 1)), int.Parse(TextBoxYears.Text));
             LabelValue.Text = value + "";
+        } else
+        {
+            Valid();
         }
     }
 
-    private bool Valid()
+    private void Valid()
     {
-        bool valid = true;
         if (String.IsNullOrWhiteSpace(TextBoxAnnual.Text))
         {
-            LabelAnnualError.Text = "Select an interest rate from 1 to 23! This field is required!";
-            valid = false;
+            LabelAnnualError.Text = "Can't leave blank";
         }
+        else
+        {
+            LabelAnnualError.Text = "Select an interest rate from 1 to 23! This field is required!";
+        }
+
         if (String.IsNullOrWhiteSpace(TextBoxYears.Text))
         {
+            LabelYearError.Text = "Can't leave blank";
+        } 
+        else
+        {
             LabelYearError.Text = "Number of years possible range is 1 to 45! This field is required!";
-            valid = false;
         }
-        return valid;
+    }
+
+    private void clearError()
+    {
+        LabelYearError.Text = "";
+        LabelAnnualError.Text = "";
     }
 }

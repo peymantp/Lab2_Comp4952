@@ -69,7 +69,8 @@
                 </tr>
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style4">
@@ -81,6 +82,15 @@
                 </tr>
             </table>
         </div>
+            <asp:RangeValidator ID="RangeValidatorYear" 
+                runat="server" 
+                EnableClientScript="false"
+                ControlToValidate="TextBoxYears"
+                ErrorMessage="RangeValidator2"
+                MinimumValue="1"
+                MaximumValue="45"
+                Type="Integer"
+                Text="Number of years possible range is 1 to 45! This field is required!"></asp:RangeValidator>
     </form>
 </body>
 </html>
