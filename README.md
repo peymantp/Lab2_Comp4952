@@ -6,19 +6,12 @@ Technical Programming Option
 Option Head Mirela Gutica
 Fall  2016
 
-Mark: ________  /100
 Lab 2 
 How to Create a Web Application with Web Forms in ASP.NET
-
-
-
-This is an  in-class assignment. No late assignments will be accepted. 
-
 
 Requirements:
 
 1.	The assignment has 2 parts: coding and questions. Submit your work in D2L and provide at the beginning of the word/text document containing the answers the link what I have to use to test your solution.
-
 
 2.	You will design and implement a simple Web Form website that will expose you to the most important aspects of ASP.NET development, data flow and web server controls.
 3.	The application calculates the future value of investments based on user input. You will add validation and style.
@@ -44,7 +37,6 @@ Add a logo.
 Add a title to your website including your name (e.g., Peter’s Investment Calculator).
 Add a stylesheet of your choice. 
  
- 
 14.	Add a table to your form. By default, the settings for a table are set to “flow layout” (text and controls are positioned from left to right and from top to bottom). A table gives you the flow control. Another way to achieve flow control is to use CSSs.
 a.	In designer, note that the menu has a menu item “Table”. Use the Table menu (an alternative choice is to use the Table control from the Toolbox).
 b.	Use the Insert Table dialog to define the table’s properties:
@@ -60,7 +52,6 @@ e.	Drag on your table the following controls: one dropdownlist, two textboxes, o
 f.	Name the controls properly.
 g.	Give initial values of your choice to the inserted textbox controls (e.g. LabelFutureValue, ButtonCalculate, etc.).
  
-
 
 h.	Observe the smart tag menu for the dropdownlist web control and how it can be connected to a data source. Leave the control unbound for now.
  
@@ -88,28 +79,50 @@ a.	Add the CSS style of your choice such that the interface design is improved. 
 Answer the questions:
 
 a.	What is happening when a user requests a page from a remote server?
+<b>The server will reder pages to the client</b>
 
 b.	Is it any client-side code executing in your assignment application? If so, how is the client-side code executed in ASP.NET?
+<b>CSS
 
 c.	What is the role of the line:
-
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+<b>
+- 'Language="C#"' language of the file
+- 'AutoEventWireup="true"'  handlers are automatically bound to events at run time based on their name and signature
+- 'CodeFile="Default.aspx.cs"' location of file that contains the methods
+</b>
 
 d.	What is the role of a default web form?
 
+<b> </b>
+
 e.	What special folders are in ASP.NET and what is their role?
 
+<b> </b>
+
 f.	What is the difference between web server controls and HTML controls?
+
+<b> validation will be done on server side for server controls</b>
 
 g.	What is the role of property IsPostBack and how should be used?
 
 h.	What control validators are available in ASP.NET, how should be used?
 
+<b> RequiredFieldValidator, CompareValidator, RangeValidator,  RegularExpressionValidator, CustomValidator. 
+They're called when isValid is called.</b>
+
 i.	What is the role of isValid and how should be used?
+
+<b> Gets a value indicating whether page validation succeeded. </b>
 
 j.	What is happening when the user hits the refresh button?
 
+The webpage will prompt the user that the browser needs to resend the information previosly submitted
 
+- GET "/Default.aspx"
 
+- Save State of "/Default.aspx"
 
+- GET "/_browserLink/requestData/requestNumber"
 
+</b>
