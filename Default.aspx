@@ -86,11 +86,20 @@
                 runat="server" 
                 EnableClientScript="false"
                 ControlToValidate="TextBoxYears"
-                ErrorMessage="RangeValidator2"
+                ErrorMessage="Number of years possible range is 1 to 45! This field is required!"
                 MinimumValue="1"
                 MaximumValue="45"
                 Type="Integer"
                 Text="Number of years possible range is 1 to 45! This field is required!"></asp:RangeValidator>
+        <asp:RangeValidator ID="RangeValidatorAnnual" 
+            runat="server" 
+            EnableClientScript="false"
+            ControlToValidate="TextBoxAnnual"
+            ErrorMessage="Select an interest rate from 1 to 23! This field is required!"
+            MinimumValue="1"
+            MaximumValue="23"
+            Type="Integer"
+            Text="Select an interest rate from 1 to 23! This field is required!"></asp:RangeValidator>
     </form>
 </body>
 </html>

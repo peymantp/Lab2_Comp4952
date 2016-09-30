@@ -41,7 +41,7 @@ public partial class _Default : System.Web.UI.Page
         }
         else
         {
-            LabelAnnualError.Text = "Select an interest rate from 1 to 23! This field is required!";
+            LabelAnnualError.Text = RangeValidatorAnnual.ErrorMessage;
         }
 
         if (String.IsNullOrWhiteSpace(TextBoxYears.Text))
@@ -50,7 +50,7 @@ public partial class _Default : System.Web.UI.Page
         } 
         else
         {
-            LabelYearError.Text = "Number of years possible range is 1 to 45! This field is required!";
+            LabelYearError.Text = RangeValidatorYear.ErrorMessage;
         }
     }
 
