@@ -82,7 +82,7 @@ a.	What is happening when a user requests a page from a remote server?
 <b>The server will reder pages to the client</b>
 
 b.	Is it any client-side code executing in your assignment application? If so, how is the client-side code executed in ASP.NET?
-<b>CSS
+<b>CSS</b>
 
 c.	What is the role of the line:
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
