@@ -1,0 +1,48 @@
+a. What is happening when a user requests a page from a remote server? 
+	The server will reder pages to the client
+
+b. Is it any client-side code executing in your assignment application? 
+	If so, how is the client-side code executed in ASP.NET? CSS
+
+c. What is the role of the line: <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+	'Language="C#"' language of the file
+	'AutoEventWireup="true"' handlers are automatically bound to events at run time based on their name and signature
+	'CodeFile="Default.aspx.cs"' location of file that contains the methods
+
+d. What is the role of a default web form?
+	The role of the default webform is to provide a base webpage, which is used if no other webpage is created. 
+
+e. What special folders are in ASP.NET and what is their role?
+	App_Browsers: ASP.net reserve this folder name for storing browser definition files. Browser definition files are used to determine the client browser capabilities. Browser definition files have .browser extension. These files are often used to help support mobile application.
+	
+	App_Code: App_code folder can contain source code for utility classes as well business objects (.cs, .vb and .jsl files). Classes that are present in App_Code folder are automatically complied when your web application complied. Arbitrary file types can be placed in the App_Code folder to create strongly typed objects. For example: placing Web service files (.wsdl and .xsd files) in the App_Code folder creates strongly typed proxies. Code present in App_Code is automatically referenced by ASP.net Application.
+	
+	App_Data: App_Data is used to store file that can be used as database files (.mdf and xml files). App_Data folder is used by ASP.NET application for storing ASP.NET application local database. Developers can also use this folder for storing data for their ASP.NET Application.
+	
+	App_GlobalResources: App_GlobalResources folder contains resources (.resx and .resources files) that are compiled into assemblies and have a global scope. Resource files are used to externalize text and images from your application code. This helps you to support multiple languages and design-time changes without recompilation of your source code. Resource files are strongly typed and can be accessed programmatically.
+	
+	App_LocalResources: App_LocalResources folder contains resources (.resx and .resources files). The same files that are being contained by App_GlobalResources but files located in this folder are only available to a particular project, web page, master page or web user control.
+	
+	App_Themes: Contain subfolders that each defines a specific theme or look and feel for you Web site. A these consist of files (such as .skin, .css and image files) that defines the appearance of Web pages and controls.
+	
+	App_WebReferences: Contains Web references files (.wsdl, .xsd, .disco, and .discomap files) that define references to Web services.
+
+f. What is the difference between web server controls and HTML controls?
+	validation will be done on server side for server controls
+
+g. What is the role of property IsPostBack and how should be used?
+	IsPostBack property is used to identify whether the page is loaded for the first time or if it's being loaded due to refreshing the browser
+	
+h. What control validators are available in ASP.NET, how should be used?
+	RequiredFieldValidator, CompareValidator, RangeValidator, RegularExpressionValidator, CustomValidator. They're called when isValid is called.
+
+i. What is the role of isValid and how should be used?
+	Gets a value indicating whether page validation succeeded.
+
+j. What is happening when the user hits the refresh button? 
+	The webpage will prompt the user that the browser needs to resend the information previosly submitted.
+	GET "/Default.aspx"
+	Save State of "/Default.aspx"
+	GET "/_browserLink/requestData/requestNumber"
+	
+Sources: https://msdn.microsoft.com/en-us/library/ex526337.aspx
